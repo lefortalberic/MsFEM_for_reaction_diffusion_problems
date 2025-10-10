@@ -35,7 +35,7 @@ func real AyFunction(real x, real y) {
         } else {
             tmpy = 0;
         }
-        return 1+tmpx*tmpy;
+        return 1.8+tmpx*tmpy;
     }
     else if (abs(NumCoeffDiff) == 6) {
         return (6+5*cos(2*pi*(x+ sqrt(2)*y))*sin(2*pi*(sqrt(2)*x-y)));
@@ -89,25 +89,25 @@ func real sigmayFunction(real x, real y) {
         real tmpy; real yin = y;
 
         if (0.001 < xin && xin < 0.332) {
-            tmpx= 10*exp(-(1/(1-((6*xin-1))*((6*xin-1)))));
+            tmpx= 5*exp(-(1/(1-((6*xin-1))*((6*xin-1)))));
         } else if (0.334 < xin && xin < 0.665) {
-            tmpx= 5*exp(-(1/(1-((6*xin-3))*((6*xin-3)))));
+            tmpx= 3*exp(-(1/(1-((6*xin-3))*((6*xin-3)))));
         } else if (0.667 < xin && xin < 0.999){
-            tmpx= 10*exp(-(1/(1-((6*xin-5))*((6*xin-5)))));
+            tmpx= 5*exp(-(1/(1-((6*xin-5))*((6*xin-5)))));
         } else {
             tmpx = 0;
         }
 
         if (0.001 < yin && yin < 0.332) {
-            tmpy= 10*exp(-(1/(1-((6*yin-1))*((6*yin-1)))));
+            tmpy= 5*exp(-(1/(1-((6*yin-1))*((6*yin-1)))));
         } else if (0.334 < yin && yin < 0.665) {
-            tmpy= 5*exp(-(1/(1-((6*yin-3))*((6*yin-3)))));
+            tmpy= 3*exp(-(1/(1-((6*yin-3))*((6*yin-3)))));
         } else if (0.667 < yin && yin < 0.999){
-            tmpy= 10*exp(-(1/(1-((6*yin-5))*((6*yin-5)))));
+            tmpy= 5*exp(-(1/(1-((6*yin-5))*((6*yin-5)))));
         } else {
             tmpy = 0;
         }
-        return 2.5*(1+tmpx*tmpy);
+        return 2*(1+tmpx*tmpy);
     }
     else if (abs(NumCoeffDiff) == 6) {
         ParameterDescription = "-- Tests for Aeps = (6+5*cos(2*pi*(x+ sqrt(2)*y))*sin(2*pi*(sqrt(2)*x-y)) ------ Sigmaeps = 23*(2+cos(2*pi*(x- sqrt(2)*y))*sin(2*pi*(sqrt(2)*x-y)) --";
