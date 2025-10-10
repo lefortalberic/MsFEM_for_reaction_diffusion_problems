@@ -74,7 +74,7 @@ func int recombine (int indice, int Nmax) { //Recombinaison par sur cellule unit
         indiceout = 2;
     }
     return indiceout;
-}*/
+}
 func int recombine (int indice, int Nmax) { //Recombinaison par sur cellule unite avec n=3, des triangles loins du centre
     // bijection from triangle k to triangle Recombine(k)
     int indiceout = indice;
@@ -116,7 +116,6 @@ func int recombine (int indice, int Nmax) { //Recombinaison par sur cellule unit
     }
     return indiceout;
 }
-/*
 func int recombine (int indice, int Nmax) {
     // bijection from triangle k to triangle Recombine(k)
     int indiceout = indice;
@@ -129,7 +128,25 @@ func int recombine (int indice, int Nmax) {
 
     return indiceout;
 }
+func int recombine (int indice, int Nmax) {
+    // bijection from triangle k to triangle Recombine(k)
+    int indiceout = indice;
+    if (indice==35) {
+        indiceout = 19;
+    }
+    if (indice==18) {
+        indiceout = 34;
+    }
+    if (indice==34) {
+        indiceout = 18;
+    }
+    if (indice==19) {
+        indiceout = 35;
+    }
 
+    return indiceout;
+}*/
+/*
 // La recombinaison spatiale est dirigée par une bijection Recombine() qui associe à un numéro de triangle un autre numéro de triangle.
 func int recombine (int indice, int Nmax) { //Nmax est pair, le numéro du dernier triangle vaut Nmax-1
     // bijection de [0,1,...,Nmax-1] dans lui-même qui au triangle k associe le triangle Recombine(k)
@@ -141,7 +158,7 @@ func int recombine (int indice, int Nmax) { //Nmax est pair, le numéro du derni
     }
     return indiceout;
 }
-
+*/
 func int recombine (int indice, int Nmax) { //Nmax est pair, le numéro du dernier triangle vaut Nmax-1     //Recombinaison par carré
     // bijection de [0,1,...,Nmax-1] dans lui-même qui au triangle k associe le triangle Recombine(k)
     // Attention dans le cas où recombine est différent de sa fonction inverse.
@@ -154,7 +171,7 @@ func int recombine (int indice, int Nmax) { //Nmax est pair, le numéro du derni
         indiceout = (Nmax-2)-indice;
     }
     return indiceout;
-}*/
+}
 /*
 func int recombine (int indice, int Nmax) { //Nmax est pair, le numéro du dernier triangle vaut Nmax-1     //Recombinaison par duo de triangle
     // bijection de [0,1,...,Nmax-1] dans lui-même qui au triangle k associe le triangle Recombine(k)
