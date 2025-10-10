@@ -29,7 +29,7 @@ load "PETSc"
 
 // Signe moins pour recombiner les coefficients (périodiques) en entrée. exemple : -1 pour les coefficients droits recombinés
 
-bool plots = 0; // 1 if plots are used, 0 otherwise
+bool plots = 1; // 1 if plots are used, 0 otherwise
 bool debug = 0;
 bool debugprecis = 0;
 bool ErreurSurK = 0;
@@ -126,19 +126,19 @@ macro storeIndex(tri,vertex) (3*tri+vertex)//EOM
 include "Coefficients.edp"
 //////////////////////////////////////////
 //func FiltrePhi= (1-x)*(1-x)*(1-x)*(1-x)*x*x*x*x*(1-y)*(1-y)*(1-y)*(1-y)*y*y*y*y*396900;
-//func FiltrePhi= (1-x)*(1-x)*x*x*(1-y)*(1-y)*y*y*900;
-func FiltrePhi= (1-x)*x*(1-y)*y*36;
+func FiltrePhi= (1-x)*(1-x)*x*x*(1-y)*(1-y)*y*y*900;
+//func FiltrePhi= (1-x)*x*(1-y)*y*36;
 //func FiltrePhi= sqrt((1-x)*x*(1-y)*y)*6.48456;
 //func FiltrePhi= sqrt(sqrt((1-x)*x*(1-y)*y))*2.6181;
 
 Vh Phiplot = FiltrePhi(x,y);
-if (plots) plot(Phiplot, fill=1, value=1, cmm="FiltrePhi", wait=1);
+//if (plots) plot(Phiplot, fill=1, value=1, cmm="FiltrePhi", wait=1);
 
 macro a(dif,u,v) (dif*dx(u)*dx(v) + dif*dy(u)*dy(v))//EOM
 // Plot diffusion coefficient
 Vh aplot=Aeps(x,y);
 Vh sigmaplot = sigmaeps(x,y);
-if (plots) plot(aplot, value=1, cmm="Diffusion coefficient", wait=1);
+if (plots) plot(TH, aplot, value=1, cmm="Diffusion coefficient", wait=1, fill=1);
 if (plots) plot(sigmaplot, value=1, cmm="Sigma coefficient", wait=1);
 
 Vh aplot2=AepsrecombineFunction(x,y);
@@ -182,4 +182,5 @@ Vh Psieps; real lambdaPsi = 0;
 real brokennormH1 = 0, emaxPhiPsi = 0, nmaxPsi = 0;
 real nH1Psi = 0, eH1PhiPsi = 0, nL2Psi = 0, eL2PhiPsi = 0;
 
+VH Vecteurpropremsfemtmp; Vstore[int] phiEpstmp(3*Ntri); //basis function matrix triangle by triangle
 printmessage("Temps d'initialisation du maillage, et de l'espace de discretisation : " << toc - tic << " secondes ");
