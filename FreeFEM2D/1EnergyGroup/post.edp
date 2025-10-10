@@ -160,26 +160,6 @@ printmessage("Temps de calcul de la solution de reference : " << toc - tic << " 
     ff << endl;
 }
 
-VH Vecteurpropremsfemtmp;
-Vstore[int] phiEpstmp(3*Ntri); //basis function matrix triangle by triangle
-if (CompareMsFEMMsFEMrecombined && recombinebool==1)
-{
-    Vstore phiEpstmpi;
-    for (int i=0; i<phiEpstmp.n; i++ ) phiEpstmp[i]=0;
-    string parametersMsFEMtmp = "_N_" + Ndiscr + "_n_" + nx + "_eps_" + eps + "_NumVP_" + NumberEigenValue + "_osCoef_" + osCoef + "_NumCoeffDiff_-" + NumCoeffDiff; // Je mets bien un "-" pour comparer au coeff déja recombiné
-    for(int i=0; i<phiEps.n; i++)
-    {   
-        string FonctionsFormeMsfem = "./Fonctions_forme/fct_forme_numero_"+ i + "_MsFEM" + parametersMsFEMtmp + ".txt";
-        ifstream ff(FonctionsFormeMsfem);
-        ff >> phiEpstmpi[];
-
-        phiEpstmp[i][] = phiEpstmpi[];
-    }
-
-    string VecteurpropreHMsfem = "./Fonctions_forme/VecteurpropreHMsFEM" + parametersMsFEMtmp + ".txt";
-    ifstream ff(VecteurpropreHMsfem);
-    ff >> Vecteurpropremsfemtmp[];
-}
 
 //}
 
