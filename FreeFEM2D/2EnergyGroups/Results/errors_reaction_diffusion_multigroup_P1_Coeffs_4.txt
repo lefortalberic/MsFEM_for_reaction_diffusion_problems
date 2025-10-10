@@ -1,10 +1,10 @@
 -- Tests for Aeps = (6+20*cos(pi*x)*sin(pi*y)*cos(pi*x)*sin(pi*y)) ------ sigmaRHSeps = 18*(2+4*cos(pi*x)*sin(pi*y)*cos(pi*x)*sin(pi*y)) --
 	n	8	N	128	eps	0.125	NumVP	1	osCoef	2	
 		L21		L22		H11		H12		max1		max2		lambdarel		eGlobalL2		eGlobalH1		eGlobalMax		
-		0.0238403	0.0326656	0.23242	0.266564	0.0377536	0.0562477	0.00660433		0.0285955		0.250075		0.0562477	
+		0.0372793	0.0703375	0.370267	0.582661	0.0580786	0.12413	0.0136639		0.0562899		0.488156		0.12413	
 
 -- Tests for Aeps = (6+20*cos(pi*x)*sin(pi*y)*cos(pi*x)*sin(pi*y)) ------ sigmaRHSeps = 18*(2+4*cos(pi*x)*sin(pi*y)*cos(pi*x)*sin(pi*y)) --
 	n	8	N	128	eps	0.125	NumVP	1	osCoef	2	
 		L21		L22		H11		H12		max1		max2		lambdarel		eGlobalL2		eGlobalH1		eGlobalMax		
-		0.0238712	0.0326847	0.232785	0.26667	0.0377243	0.0562951	0.00679823		0.0286193		0.250302		0.0562951	
+		0.0371645	0.0702929	0.369011	0.582573	0.0578812	0.124014	0.0132424		0.0562241		0.487627		0.124014	
 
