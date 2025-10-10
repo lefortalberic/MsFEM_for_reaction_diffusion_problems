@@ -1,6 +1,12 @@
 # MsFEM
-Implementation of MsFEM for reaction-diffusion eigenproblems in [FreeFEM](https://freefem.org/) and [MATLAB](https://fr.mathworks.com/).
-This project is divided into two different parts detailed below.
+In this project we implement Multiscale Finite Element Method (MsFEM) type approaches for
+reaction–diffusion equations with oscillatory coefficients. These approaches are based on a Galerkin-type formulation on a coarse mesh.
+The basis functions of the approximation space are solutions to local problems, and are thus well adapted to the multiscale problem under consideration.
+These functions are constructed locally on each element of the coarse mesh using a mesh sufficiently fine to capture
+all the details of the microstructure.
+
+The implementation of MsFEM for reaction-diffusion eigenproblems are in [MATLAB](https://fr.mathworks.com/) for 1D simulations and in [FreeFEM](https://freefem.org/) for 2D simulations.
+This project is so divided into the two different parts detailed below.
 
 Each part contains a ReadMe file detailing the operation of the respective part.
 
