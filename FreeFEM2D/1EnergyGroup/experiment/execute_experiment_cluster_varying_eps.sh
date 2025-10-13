@@ -45,16 +45,16 @@ for TEST_LARGE_N in $TOTEST_LARGE_N; do sed -i "s/N=.*/N= $TEST_LARGE_N/" "exper
         cp experiment/parameters.txt parameters.txt
         
         #mpirun -np $NUMBER_OF_PROC FreeFem++-mpi main_react_diff_triche.edp -v 0
-        #mpirun -np $NUMBER_OF_PROC FreeFem++-mpi main_react_diff_P1.edp -v 0
+        mpirun -np $NUMBER_OF_PROC FreeFem++-mpi main_react_diff_P1.edp -v 0
         
         for TEST_OS in $TOTEST_OS; do sed -i "s/osCoef=.*/osCoef= $TEST_OS/" "experiment/parameters.txt"
             
             cp experiment/parameters.txt parameters.txt
 
             #mpirun -np $NUMBER_OF_PROC FreeFem++-mpi main_react_diff_MsFEM_OS_square.edp -v 0
-            #mpirun -np $NUMBER_OF_PROC FreeFem++-mpi main_react_diff_MsFEM_OS_square_filtre.edp -v 0
+            mpirun -np $NUMBER_OF_PROC FreeFem++-mpi main_react_diff_MsFEM_OS_square_filtre.edp -v 0
             #mpirun -np $NUMBER_OF_PROC FreeFem++-mpi main_react_diff_MsFEM_OS_square_filtre_analysis.edp -v 0
-            mpirun -np $NUMBER_OF_PROC FreeFem++-mpi main_erreur_phi_psi_cellule_unite_filtre_recombine.edp -v 0
+            #mpirun -np $NUMBER_OF_PROC FreeFem++-mpi main_erreur_phi_psi_cellule_unite_filtre_recombine.edp -v 0
 
         done
 
