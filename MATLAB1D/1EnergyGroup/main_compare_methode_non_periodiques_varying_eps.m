@@ -1,4 +1,3 @@
-
 % ---------------------------
 %Paramètres
 % ---------------------------
@@ -70,7 +69,6 @@ plot([3*H/(0.03) 3*H/(0.03)],ylims,'--','Color','black','LineWidth',3);
 text(3*H/(0.03),-0.03, ' \epsilon_{Min,2D}', 'HorizontalAlignment', 'center','FontSize', 28);
 hold on;
 
-%legend('Methode P1','Methode triche','Methode MsFEM\_0\_3H','Methode MsFEM\_0\_3H\_moyenne','Methode MsFEM\_0\_3H\_sinus','FontSize',25)
 legend('P1 method','MsFEM dirichlet 3H method','MsFEM Dirichlet 9H method', 'MsFEM periodique 3H method','MsFEM periodique 9H method','FontSize',25)
 
 xlabel("3H/\epsilon",'FontSize',25)
