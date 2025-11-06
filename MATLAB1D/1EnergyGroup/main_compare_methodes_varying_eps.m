@@ -1,4 +1,4 @@
-
+%Code qui compare et trace les erreurs pour differentes methodes, en fonction de epsilon
 % ---------------------------
 %Paramètres
 % ---------------------------
@@ -14,6 +14,7 @@ List_erreur_H1_P1 = [];
 List_erreur_H1_triche = [];
 List_erreur_H1_0_3H_periodique = [];
 List_erreur_H1_0_3H_periodique_filtre = [];
+
 %Solutions MsFEM
 for eps=epsilon 
 
