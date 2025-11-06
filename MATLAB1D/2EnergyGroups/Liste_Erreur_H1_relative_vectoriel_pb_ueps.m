@@ -36,11 +36,7 @@ for Nbpt_H=Nbpt_H_list
         Khi_global_2_cas2(:,l,1)= UU_g_cas2_2 ;
         Khi_global_2_cas2(:,l,2)= UU_d_cas2_2 ;
     end
-    %
-    % [~,Psi_1_adjoint,Psi_2_adjoint] = Solution_pb_spectral_adjoint(Nbpt_ref);
-    % [~,Psi_1,Psi_2] = Solution_pb_spectral(Nbpt_ref);
-    % Symmetry = check_symmetry(Psi_1,Psi_2,Psi_1_adjoint,Psi_2_adjoint);
-    
+
     Vect_ones = ones(Nbpt_ref,1);
     MM_11=matM(Khi_global_1_cas1,Vect_ones , Vect_ones,Nbpt_H,Nbpt_h, epsilon) + matM(Khi_global_2_cas1,Vect_ones , Vect_ones,Nbpt_H,Nbpt_h, epsilon);
     MM_22=matM(Khi_global_1_cas2,Vect_ones , Vect_ones,Nbpt_H,Nbpt_h, epsilon) + matM(Khi_global_2_cas2,Vect_ones , Vect_ones,Nbpt_H,Nbpt_h, epsilon);
