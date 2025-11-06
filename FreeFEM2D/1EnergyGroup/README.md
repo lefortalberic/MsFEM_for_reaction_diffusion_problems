@@ -1,7 +1,10 @@
 # Getting started
 This folder corresponds to the simulation of the reaction-diffusion eigenvalue problem. It implements a MsFEM-type solution method for a scalar equation in two dimensions.
 
-The main file (using the filter method) to run the simulation is [main_react_diff_MsFEM_OS_square_filtre.edp](main_react_diff_MsFEM_OS_square_filtre.edp). You can run this file using 
+The main file (using the filter method) to run the simulation is [main_react_diff_MsFEM_OS_square_filtre.edp](main_react_diff_MsFEM_OS_square_filtre.edp). This file implements the method described in the article by **Claude Le Bris, Albéric Lefort, and Frédéric Legoll**,  
+*Multiscale Finite Element Method for Reaction–Diffusion Eigenproblems and Applications*
+
+You can run this file using 
 
 ```bash
 mpirun -np 1 FreeFem++-mpi -wg main_react_diff_MsFEM_OS_square_filtre.edp -v 0
