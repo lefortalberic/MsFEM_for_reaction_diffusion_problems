@@ -6,7 +6,6 @@
 % et la solution exacte, calculée avec les éléments P1 classiques de pas de
 % maillage très petit
 
-
 % ---------------------------
 %Paramètres
 % ---------------------------
