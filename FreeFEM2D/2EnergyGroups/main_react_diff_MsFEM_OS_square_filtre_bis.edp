@@ -1,6 +1,8 @@
 // react_diff_P1.edp
 //
-// A FreeFEM++ script that shows the usual, intrusive MsFEM approach on a simple diffusion problem
+// A FreeFEM++ script that shows the MsFEM approach on the vectorial reaction-diffusion problem
+//
+// This file correspond to the alternative method described in the article
 //
 // Note that this implementation is possible mainly due to the following in-depth functionality of FreeFEM++:
 // - VK(k,i) gives the global degree of freedom of the ith local DOF in the kth triangle of the mesh
