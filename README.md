@@ -10,6 +10,9 @@ This project is so divided into the two different parts detailed below.
 
 Each part contains a ReadMe file detailing the operation of the respective part.
 
+The main approach is presented in the article by **Claude Le Bris, Albéric Lefort, and Frédéric Legoll**,  
+*Multiscale Finite Element Method for Reaction–Diffusion Eigenproblems and Applications*.
+
 ## 1D Simulations
 The first part is coded in MATLAB for all 1D simulations, providing a more accessible approach and manipulation.
 This part is further divided into two sections. The first corresponds to the simulation of the scalar eigenvalue problem modeling a single energy group (in the [MATLAB1D/1EnergyGroup](MATLAB1D/1EnergyGroup) folder).
